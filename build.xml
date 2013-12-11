@@ -138,7 +138,7 @@
 		</copy>
 	</target>
 
-	<target name="compile">
+	<!--<target name="compile">
 		<javac srcdir="${src.dir}" destdir="${src.dir}" verbose="${full-compile}">
 			<classpath refid="classpath.test" />
 			<classpath refid="classpath.base" />
@@ -147,9 +147,9 @@
 
 	<target name="compile-test">
 
-		<!--<mkdir dir="${classes.dir}" />-->
+	<mkdir dir="${classes.dir}" />
 
-		<!--<javac srcdir="${testdir}" classpathref="compile.classpath" destdir="${testdir}" debug="true" includes="${src.dir}" includeAntRuntime="false" />-->
+	<javac srcdir="${testdir}" classpathref="compile.classpath" destdir="${testdir}" debug="true" includes="${src.dir}" includeAntRuntime="false" />
 
 		<javac srcdir="${testdir}" destdir="${testdir}" debug="true" includes="${srcdir}" includeAntRuntime="false">
 			<classpath refid="classpath.base" />
@@ -170,12 +170,12 @@
 			<classpath refid="classpath.src" />
 			<classpath refid="classpath.test" />
 			<formatter type="brief" usefile="false" />
-			<!--<test name="TestMessageUtil" />-->
-			<!--<batchtest>
+			<test name="TestMessageUtil" />
+			<batchtest>
 				<fileset dir="${testdir}">
 					<include name="**/Test*.java" />
 				</fileset>
-			</batchtest>-->
+			</batchtest>
 		</junit>
 		<junitreport todir="${test.htmlreports.dir}">
 			<fileset dir="${test.data.dir}">
@@ -183,7 +183,7 @@
 			</fileset>
 			<report format="frames" todir="${test.htmlreports.dir}" />
 		</junitreport>
-	</target>
+	</target>-->
 
 	<target name="build.war" depends="build">
 		<delete dir="${dist.dir}" />
