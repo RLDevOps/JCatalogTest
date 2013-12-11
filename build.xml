@@ -102,6 +102,7 @@
 	<target name="build" depends="prepare,deploy.copyJars,test" includeantruntime="true" description="Compile Java files and copy static files.">
 		<javac srcdir="${src.java.dir}" destdir="${build.dir}/${project.name}/WEB-INF/classes">
 			<include name="**/*.java" />
+			<classpath refid="classpath"/>
 		</javac>
 
 		<copy todir="${build.dir}/${project.name}/WEB-INF">
