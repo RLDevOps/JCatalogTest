@@ -97,7 +97,7 @@
 	</target>-->
 
 	<!-- Executable Targets -->
-	<!--<target name="build" depends="prepare,deploy.copyJars,test" description="Compile Java files and copy static files.">
+	<target name="build" depends="prepare,deploy.copyJars,test" description="Compile Java files and copy static files.">
 		<javac srcdir="${src.java.dir}" destdir="${build.dir}/${project.name}/WEB-INF/classes">
 			<include name="**/*.java" />
 		</javac>
@@ -141,7 +141,7 @@
 			<classpath refid="classpath.test" />
 			<classpath refid="classpath.base" />
 		</javac>
-	</target>-->
+	</target>
 
 	<target name="compile-test">
 
@@ -183,7 +183,7 @@
 		</junitreport>
 	</target>
 
-	<target name="build.war">
+	<target name="build.war" depends="build">
 		<delete dir="${dist.dir}" />
 		<mkdir dir="${dist.dir}" />
 		<!-- create a war file for distribution -->
