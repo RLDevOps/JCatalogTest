@@ -42,7 +42,7 @@
 
 	
 	<path id="classpath.base">
-		<pathelement location="C:\Program Files (x86)\Java\jdk1.7.0_25\lib\tools.jar" />
+		<pathelement location="${basedir}/lib/tools.jar" />
 	</path>
 
 	<path id="classpath.test">
