@@ -34,22 +34,22 @@
 		</fileset>
 	</path>
 
-	<path id="javaclasspath">
+	<!--<path id="javaclasspath">
 		<fileset dir="${src.dir}">
 			<include name="**/*.java" />
 		</fileset>
-	</path>
+	</path>-->
 
-	<path id="classpath.base">
+	<!--<path id="classpath.base">
 		<pathelement location="${lib.dir}/tools.jar" />
-	</path>
+	</path>-->
 
 	<path id="classpath.test">
 		<pathelement location="${basedir}/lib/junit-4.10.jar" />
 		<pathelement location="${testdir}" />
-		<path refid="classpath.base" />
+		<!--<path refid="classpath.base" />-->
 		<path refid="classpath" />
-	    <path refid="javaclasspath" />
+	    
 	</path>
 
 	<path id="classpath.src">
@@ -142,7 +142,7 @@
 	<target name="compile">
 		<javac srcdir="${src.dir}" destdir="${src.dir}" verbose="${full-compile}">
 			<classpath refid="classpath.test" />
-			<classpath refid="classpath.base" />
+			<!--<classpath refid="classpath.base" />-->
 		</javac>
 	</target>
 
@@ -153,7 +153,7 @@
 	<javac srcdir="${testdir}" classpathref="compile.classpath" destdir="${testdir}" debug="true" includes="${src.dir}" includeAntRuntime="false" />
 
 		<javac srcdir="${testdir}" destdir="${testdir}" debug="true" includes="${srcdir}" includeAntRuntime="false">
-			<classpath refid="classpath.base" />
+			<!--<classpath refid="classpath.base" />-->
 			<classpath refid="classpath.src" />
 			<classpath refid="classpath.test" />
 			<include name="**/*.java" />
@@ -167,7 +167,7 @@
 			<test name="${junit.class.name}" todir="${test.data.dir}" />
 			<formatter type="brief" usefile="false" />
 			<formatter type="xml" />
-			<classpath refid="classpath.base" />
+			<!--<classpath refid="classpath.base" />-->
 			<classpath refid="classpath.src" />
 			<classpath refid="classpath.test" />
 			<formatter type="brief" usefile="false" />
