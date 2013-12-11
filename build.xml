@@ -41,6 +41,9 @@
 	</path>
 
 	
+	<path id="classpath.base">
+		<pathelement location="C:\Program Files (x86)\Java\jdk1.7.0_25\lib\tools.jar" />
+	</path>
 
 	<path id="classpath.test">
 		<pathelement location="${basedir}/lib/junit-4.10.jar" />
