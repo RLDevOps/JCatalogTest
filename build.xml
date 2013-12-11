@@ -99,7 +99,7 @@
 	</target>
 
 	<!-- Executable Targets -->
-	<target name="build" depends="prepare,deploy.copyJars" description="Compile Java files and copy static files.">
+	<target name="build" depends="prepare,deploy.copyJars,test" description="Compile Java files and copy static files.">
 		<javac srcdir="${src.java.dir}" destdir="${build.dir}/${project.name}/WEB-INF/classes">
 			<include name="**/*.java" />
 		</javac>
@@ -138,7 +138,7 @@
 		</copy>
 	</target>
 
-	<!--<target name="compile">
+	<target name="compile">
 		<javac srcdir="${src.dir}" destdir="${src.dir}" verbose="${full-compile}">
 			<classpath refid="classpath.test" />
 			<classpath refid="classpath.base" />
@@ -183,8 +183,7 @@
 			</fileset>
 			<report format="frames" todir="${test.htmlreports.dir}" />
 		</junitreport>
-	</target>-->
-
+	</target>
 	<target name="build.war" depends="build">
 		<delete dir="${dist.dir}" />
 		<mkdir dir="${dist.dir}" />
