@@ -184,6 +184,7 @@
 			<report format="frames" todir="${test.htmlreports.dir}" />
 		</junitreport>
 	</target>
+
 	<target name="build.war" depends="build">
 		<delete dir="${dist.dir}" />
 		<mkdir dir="${dist.dir}" />
