@@ -40,9 +40,7 @@
 		</fileset>
 	</path>
 
-	<path id="classpath.base">
-		<pathelement location="C:\Program Files (x86)\Java\jdk1.7.0_25\lib\tools.jar" />
-	</path>
+	
 
 	<path id="classpath.test">
 		<pathelement location="${basedir}/lib/junit-4.10.jar" />
@@ -89,14 +87,14 @@
 		<mkdir dir="${test.htmlreports.dir}" />
 	</target>
 
-	<target name="deploy.copyJars">
+	<!--<target name="deploy.copyJars">
 		<copy todir="${build.dir}/${project.name}/WEB-INF/lib">
 			<fileset dir="lib">
 				<include name="**/*.jar" />
 				<include name="**/*.dtd" />
 			</fileset>
 		</copy>
-	</target>
+	</target>-->
 
 	<!-- Executable Targets -->
 	<!--<target name="build" depends="prepare,deploy.copyJars,test" description="Compile Java files and copy static files.">
@@ -185,13 +183,13 @@
 		</junitreport>
 	</target>
 
-	<!--<target name="build.war" depends="build">
+	<target name="build.war" depends="build">
 		<delete dir="${dist.dir}" />
 		<mkdir dir="${dist.dir}" />
 		<!-- create a war file for distribution -->
 		<jar destfile="${dist.dir}/${project.name}.war" basedir="${build.dir}/${project.name}" />
 		<delete dir="${build.dir}" />
 	</target>
-	-->
+	
 </project>
 
