@@ -86,7 +86,7 @@
 		<mkdir dir="${build.dir}/${project.name}/WEB-INF/classes" />
 		<mkdir dir="${build.dir}/${project.name}/WEB-INF/lib" />
 		<mkdir dir="${test.data.dir}" />
-		<mkdir dir="${test.htmlreports.dir}" />
+		<mkdir dir="${test.htmlreports.dir}" />			
 	</target>
 
 	<target name="deploy.copyJars">
@@ -172,11 +172,7 @@
 			<classpath refid="classpath.test" />
 			<formatter type="brief" usefile="false" />
 			<test name="TestMessageUtil" />
-			<batchtest>
-				<fileset dir="${testdir}">
-					<include name="**/Test*.java" />
-				</fileset>
-			</batchtest>
+			
 		</junit>
 		<junitreport todir="${test.htmlreports.dir}">
 			<fileset dir="${test.data.dir}">
