@@ -87,14 +87,14 @@
 		<mkdir dir="${test.htmlreports.dir}" />
 	</target>
 
-	<!--<target name="deploy.copyJars">
+	<target name="deploy.copyJars">
 		<copy todir="${build.dir}/${project.name}/WEB-INF/lib">
 			<fileset dir="lib">
 				<include name="**/*.jar" />
 				<include name="**/*.dtd" />
 			</fileset>
 		</copy>
-	</target>-->
+	</target>
 
 	<!-- Executable Targets -->
 	<target name="build" depends="prepare,deploy.copyJars,test" description="Compile Java files and copy static files.">
