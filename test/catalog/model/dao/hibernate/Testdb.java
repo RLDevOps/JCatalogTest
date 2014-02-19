@@ -30,7 +30,7 @@ public class Testdb extends DatabaseTestCase {
 	
 	@Override
 	protected IDatabaseConnection getConnection() throws Exception {
-		// TODO Auto-generated method stub -sandeep
+		// TODO Auto-generated method stub
 
 		   Class driverClass = 
 		     Class.forName("com.mysql.jdbc.Driver");
@@ -39,7 +39,7 @@ public class Testdb extends DatabaseTestCase {
 			 (Connection) DriverManager.getConnection(
 		  "jdbc:mysql://54.84.108.72:3306/catalog", "root", "admin");
 		   
-		   ret DatabaseConnection(jdbcConnection);
+		   return new DatabaseConnection(jdbcConnection);
 	}
 
 	
