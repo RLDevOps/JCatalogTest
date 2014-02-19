@@ -37,7 +37,7 @@ public class Testdb extends DatabaseTestCase {
 
 		   Connection jdbcConnection = 
 			 (Connection) DriverManager.getConnection(
-		  "jdbc:mysql://ec2-54-84-108-72.compute-1.amazonaws.com:3306/catalog", "root", "admin");
+		  "jdbc:mysql:ec2-54-84-108-72.compute-1.amazonaws.com:3306/catalog", "root", "admin");
 		   
 		   ret DatabaseConnection(jdbcConnection);
 	}
