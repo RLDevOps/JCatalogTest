@@ -47,7 +47,7 @@ public class CatalogServiceImpl implements CatalogService {
 	 * @param newCatalogDao the CatalogDao to be set
 	 */
 	public void setCatalogDao(CatalogDao newCatalogDao) {
-		this.catalogDao = newCatalogDao
+		this.catalogDao = newCatalogDao;
 	}
 	
 	/**
