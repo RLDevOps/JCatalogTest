@@ -13,10 +13,10 @@
 		<property name="url">
 			<value>jdbc:mysql://localhost:3306/catalog</value>
 		</property>
-		<property name="ashutosh">
+		<property name="root">
 			<value>root</value>
 		</property>
-		<property name="admin">
+		<property name="root@123">
 			<value></value>
 		</property>
 	</bean>
